@@ -1,0 +1,23 @@
+{
+  "name": "tip-calculator-app-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dedricsmith/tipcalculator.git"
+  },
+  "author": "Dedric",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.26.0",
+    "parcel": "^2.8.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.2"
+  }
+}

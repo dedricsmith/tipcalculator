@@ -1,0 +1,248 @@
+:root {
+  --clr-cyan: hsl(172, 67%, 45%);
+  --clr-darkcyan: hsl(183, 100%, 15%);
+  --clr-dg-cyan: hsl(186, 14%, 43%);
+  --clr-gray-cyan: hsl(184, 14%, 56%);
+  --clr-lightgray-cyan: hsl(185, 41%, 84%);
+  --clr-lightest-cyan: hsl(189, 41%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr--red-light: hsl(0, 100%, 63%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Space Mono', monospace;
+}
+
+main {
+  background: var(--clr-lightgray-cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: var(--clr-darkcyan);
+  text-transform: uppercase;
+}
+
+h2 {
+  color: var(--clr-white);
+  font-size: 1.8rem;
+}
+
+span {
+  color: var(--clr-gray-cyan);
+  font-size: 1.2rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 3rem;
+  color: var(--clr-cyan);
+}
+
+img {
+  background-repeat: no-repeat;
+}
+
+input {
+  transition: ease-in-out 250ms;
+  color: var(--clr-darkcyan);
+  font-weight: 700;
+  font-size: 1.8rem;
+  font-family: 'Space Mono', monospace;
+  padding: 0.5em;
+  text-align: end;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background: var(--clr-lightest-cyan);
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+input:focus-visible {
+  border-radius: 5px;
+  outline: solid 2px var(--clr-cyan);
+}
+
+input:hover {
+  outline: solid 2px var(--clr-cyan);
+  box-shadow: 1px 2px 15px var(--clr-cyan);
+}
+
+/* Hides input arrows */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+}
+
+input::placeholder {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+ul {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 1em;
+}
+
+button {
+  border: none;
+  background: var(--clr-darkcyan);
+  color: var(--clr-white);
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  font-family: 'Space Mono', monospace;
+}
+
+button:hover {
+  background-color: var(--clr-lightgray-cyan);
+  color: var(--clr-darkcyan);
+}
+
+.container {
+  background: var(--clr-white);
+  max-width: 80%;
+  padding: 3em 2em;
+  border-radius: 10px;
+  margin-bottom: 3em;
+}
+
+.tip--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+}
+
+.input--container {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  gap: 2.5em;
+  font-size: 2rem;
+  flex-basis: 50%;
+}
+
+.input--container:has(.flex-col label) {
+  color: var(--clr-dg-cyan);
+}
+
+.ui--container {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  align-items: end;
+  border-radius: 5px;
+  background: var(--clr-darkcyan);
+  padding: 3em;
+  flex-basis: 50%;
+}
+
+.logo {
+  margin: 3em 0;
+}
+
+.svg {
+  position: absolute;
+  top: 2.5em;
+  left: 1em;
+  z-index: 1;
+}
+
+.ui--tip {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.ui--text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-col:first-child {
+  position: relative;
+}
+
+.flex-col:last-child {
+  position: relative;
+}
+
+.custom--tip {
+  padding: 1rem 2rem;
+  border: none;
+}
+
+.btn {
+  background: var(--clr-cyan);
+  color: var(--clr-darkcyan);
+  width: 100%;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.error {
+  color: var(--clr--red-light);
+  font-size: 1.4rem;
+}
+
+@media (max-width: 550px) {
+  .input--container {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 750px) {
+  ul {
+    grid-template-columns: repeat(2, 8em);
+    grid-template-rows: repeat(3, 3em);
+  }
+  .tip--container {
+    flex-direction: column;
+  }
+
+  .input--container {
+    display: grid;
+    gap: 1.5em;
+  }
+
+  .ui--container {
+    width: 100%;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
