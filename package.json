@@ -2,13 +2,14 @@
   "name": "tip-calculator-app-main",
   "version": "1.0.0",
   "description": "![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)",
-  "main": "index.js",
+  "default": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:dedricsmith/tipcalculator.git"
+    "url": "git+ssh://git@github.com/dedricsmith/tipcalculator.git"
   },
   "author": "Dedric",
   "license": "ISC",
@@ -19,5 +20,9 @@
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/dedricsmith/tipcalculator/issues"
+  },
+  "homepage": "https://github.com/dedricsmith/tipcalculator#readme"
 }
