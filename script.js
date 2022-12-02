@@ -1,3 +1,4 @@
+'use strict';
 const tipsBtns = document.querySelectorAll('#tipBtn');
 const btnReset = document.querySelector('.btn--reset');
 
@@ -10,7 +11,7 @@ const totalAmountDisplay = document.querySelector('#totalAmount');
 const errorPopup = document.querySelectorAll('#error');
 
 billInput.value = '';
-numberPeopleInput.value = '';
+numberPeopleInput.value = '1';
 customTipInput.value = '';
 
 let tipOption;
@@ -75,7 +76,7 @@ function displayUI(tipCalculated, totalBillPerPerson) {
 // Reset inputs and display when reset button clicked
 function resetApp() {
   billInput.value = '';
-  numberPeopleInput.value = '';
+  numberPeopleInput.value = '1';
   customTipInput.value = '';
   tipAmountDisplay.innerText = '$' + '0.00';
   totalAmountDisplay.innerText = '$' + '0.00';
